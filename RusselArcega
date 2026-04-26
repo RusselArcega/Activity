@@ -1,0 +1,54 @@
+import java.util.*;
+
+public class Main {
+	static int russel (int a, int b){
+		return a + b;		
+	}
+	
+	static int minus (int a, int b){
+	    return a - b;
+	    
+	}
+	static int multi (int a, int b){
+	    return a * b;
+	
+	}
+	static int divid (int a, int b){
+	    return a / b;
+	}
+	public static void main(String[] args) {
+		Scanner r = new Scanner (System.in);
+		
+		int rus1,rus2,result;
+		char operator;
+		System.out.println("Operator");
+		operator = r.next().charAt(0);
+		System.out.println("Put a number");
+		rus1 = r.nextInt();
+		System.out.println("Put a number");
+		rus2 = r.nextInt();
+		
+		switch (operator){
+		    case '+':
+		    System.out.println("Answer : " + russel(rus1,rus2));
+		    break;
+		    case '-':
+		    System.out.println("Answer : " + minus(rus1,rus2));
+		    break;
+		    case 'x':
+		    System.out.println("Answer : " + multi(rus1,rus2));
+		    break;
+		    case '÷':
+		    System.out.println("Answer : " + divid(rus1,rus2));
+		    break;
+		   
+		   default:
+		System.out.println("Errrrrroooorrrr ");
+		}
+		
+	}
+	
+		
+		
+	
+		

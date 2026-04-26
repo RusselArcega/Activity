@@ -1,0 +1,50 @@
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		Scanner r = new Scanner (System.in);
+		
+String [][] russel = {{"Arcega","Del Coro","Alfonso","Esteban","Padil","TaloTalo","Dolotallas","Macabales","Dreu","Pacaña"},{"Russel","Dwight","Jex","Enzo","Paul","Kiel","Christian","Seanjay","Joseph","Chester"}};
+
+double [][] grade = new double[9][10];
+
+		for (int i = 0 ; i <= 9; i ++){
+		    System.out.println(russel[1][i] + russel[0][i] );
+		}
+		
+		for(int i = 0 ; i <9 ; i ++){
+		    System.out.println("Enter The Grade "+ russel[1][i] + " " + russel[0][i] );
+		    for (int j = 0 ; j <4; j++){
+		        System.out.println("Grade"+ (j+1) + ":");
+		        grade [i][j] = r.nextDouble();
+		        
+		        }
+		}
+		
+		
+		System.out.print("\nChoose student number: ");
+        int choose = r.nextInt();
+        
+        
+		for (int i = 0 ; i <=9 ; i++){
+		    for (int j = 0 ; j <= 4 ; j++)
+		    if(grade[choose][i] > grade[choose][j]){
+                    double temp = grade[choose][i];
+                    grade[choose][i] = grade[choose][j];
+                    grade[choose][j] = temp;
+		    }
+		}
+		
+		
+		System.out.println("Sorted grades (Ascending):");
+        double sum = 0;
+        for(int i = 0; i < 3; i++){
+            System.out.println(grade[choose][i]);
+            sum += grade[choose][i];
+        }
+
+        double avg = sum / 10;
+
+        System.out.println("Average: " + avg);
+	}
